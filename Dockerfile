@@ -1,4 +1,5 @@
-FROM golang:1.23.3-alpine3.19
+ARG GOLANG_VERSION="1.23.3"
+FROM golang:${GOLANG_VERSION}-alpine3.19
 
 ARG BUF_VERSION="1.47.2"
 
