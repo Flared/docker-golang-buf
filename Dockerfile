@@ -3,7 +3,8 @@ FROM golang:${GOLANG_VERSION}-alpine3.19
 
 ARG BUF_VERSION="1.47.2"
 
-RUN apk add curl
+RUN apk add curl \
+      make
 
 RUN curl -sSL \
       "https://github.com/bufbuild/buf/releases/download/v${BUF_VERSION}/buf-$(uname -s)-$(uname -m)" \
